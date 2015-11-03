@@ -25,6 +25,12 @@ script:
     - touch ./shippable/buildoutput/config.txt
     - echo $BUILD_NUMBER > ./shippable/buildoutput/config.txt
     - grunt
+    
+after_success:
+    - echo "success"
+    
+after_failure:
+    - echo "failure"
 
 after_script:
     - ./node_modules/.bin/istanbul cover grunt -- -u tdd
