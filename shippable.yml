@@ -26,12 +26,6 @@ script:
     - echo $BUILD_NUMBER > ./shippable/buildoutput/config.txt
     - grunt
     
-after_success:
-    - echo "success"
-    
-after_failure:
-    - echo "failure"
-
 after_script:
     - ./node_modules/.bin/istanbul cover grunt -- -u tdd
     - ./node_modules/.bin/istanbul report cobertura --dir  ./shippable/codecoverage/
