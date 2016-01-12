@@ -8,7 +8,7 @@ node_js:
 env:
     global:
         - XUNIT_FILE=./shippable/testresults/result.xml
-        - secure: #encryped var
+      #  - secure: #encryped var
         # TOKEN is a GitHub token for the subscription triggering the build
 
 before_install:
